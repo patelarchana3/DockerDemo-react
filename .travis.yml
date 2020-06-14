@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t patelarchana84/DockerDemo-react -f Dockerfile.dev .
+
+script:
+  - docker run patelarchana84/DockerDemo-react npm run test -- --coverage
