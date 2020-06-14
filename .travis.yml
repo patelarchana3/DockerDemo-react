@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t patelarchana84/DockerDemo-react -f Dockerfile.dev .
+  - docker build -t patelarchana84/dockerdemo-react -f Dockerfile.dev .
 
 script:
-  - docker run patelarchana84/DockerDemo-react npm run test -- --coverage
+  - docker run patelarchana84/dockerdemo-react npm run test -- --coverage
